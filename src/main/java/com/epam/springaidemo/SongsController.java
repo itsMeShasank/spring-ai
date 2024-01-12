@@ -16,7 +16,7 @@ public class SongsController {
 
     @GetMapping("/song/{movie}")
     public String getSong(@PathVariable String movie) {
-        String template = "does how many number of songs does "+movie+" have?";
+        String template = "how many number of songs does "+movie+" have?";
         String aiResponse =  chatClient.generate(template);
         System.out.println(aiResponse);
         return aiResponse;
